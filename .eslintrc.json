@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true
+  },
+  "ignorePatterns": ["dist"],
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/jsx-runtime"
+  ],
+  "settings": {
+    "import/ignore": ["./postcss.config.js", "./tailwind.config.js"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaVersion": "latest"
+  },
+  "plugins": [
+      "react",
+      "@typescript-eslint",
+      "import"
+  ],
+  "rules": {
+    "indent": ["warn", 2],
+    "quotes": ["error", "double"],
+    "prefer-const": "error",
+    "no-console": "warn",
+    "no-unused-vars": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["warn", "always"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "builtin",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+import { Popup } from "../src/components/Popup/Popup";
+
+import { Story } from "@storybook/react";
+
+<Meta title="Docs/Popup" component={Popup} />
+
+export const Template = args => <Popup {...args} />
+
+# Popup 
+
+To show popup you have to pass boolean prop `show`
+
+for handling closeEvent - use `onClose` props

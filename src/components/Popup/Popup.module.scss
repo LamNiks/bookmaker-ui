@@ -1,0 +1,15 @@
+.container {
+  @apply flex m-2 w-full shadow-2xl rounded-2xl min-w-fit min-h-[150px];
+}
+
+.wrapper {
+  @apply p-5 flex flex-col w-full;
+}
+
+.header {
+  @apply flex justify-between items-center;
+}
+
+.closeButton {
+  @apply bg-transparent text-black;
+}

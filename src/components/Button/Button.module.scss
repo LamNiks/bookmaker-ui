@@ -1,0 +1,26 @@
+@mixin hover {
+  @apply transition-opacity;
+
+  &:hover {
+    @apply opacity-70;
+  }
+}
+
+.defaultButton {
+  @apply my-[4px] mx-[12px] p-2 flex items-center justify-center
+    min-h-[32px] w-fit cursor-pointer outline-none no-underline
+    appearance-none border-none rounded-lg min-w-fit;
+  @include hover;
+}
+
+.greenVariant {
+  @apply bg-green-300;
+}
+
+.blackVarian {
+  @apply bg-black text-white;
+}
+
+.blueVariant {
+  @apply bg-blue-300;
+}

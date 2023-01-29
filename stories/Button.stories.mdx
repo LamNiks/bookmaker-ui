@@ -1,0 +1,15 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import { Button } from "../src/components/Button/Button"
+
+<Meta title="Docs/Button" component={Button} />
+
+export const Template = args => <Button {...args} />
+
+# Button 
+
+Button has three variants - `black`, `blue`, `green`
+
+Also you can choose a heading tag for correct markup via props `as`
+
+To customize button style, use `width`, `height` and `backgroundColor` props
