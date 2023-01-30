@@ -1,15 +1,20 @@
 {
-  "name": "builder",
+  "name": "bookmaker-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "src/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build:esm": "rollup -c --bundleConfigAsCjs -d dist/esm -f esm --environment OUT_DIR:esm",
-    "build:cjs": "rollup -c --bundleConfigAsCjs -d dist/cjs -f cjs --environment OUT_DIR:cjs",
-    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "rollup -c --bundleConfigAsCjs --environment OUT_DIR:esm",
+    "build:cjs": "rollup -c --bundleConfigAsCjs --environment OUT_DIR:cjs",
+    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
     "test": "jest"
   },
   "author": "Nikita Lambin",

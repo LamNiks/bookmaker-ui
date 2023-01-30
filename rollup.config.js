@@ -1,3 +1,5 @@
+import packageJSON from "./package.json";
+
 import { defineConfig } from "rollup";
 import { babel } from "@rollup/plugin-babel";
 import external from "rollup-plugin-peer-deps-external";
@@ -14,17 +16,18 @@ export default defineConfig([
     output: [
       {
         format: "cjs",
+        file: packageJSON.main,
         sourcemap: true,
-        preserveModules: true,
         exports: "named",
       },
       {
         format: "esm",
+        file: packageJSON.module,
         exports: "named",
-        sourcemap: true,
-        preserveModules: true,
+        sourcemap: "inline",
       },
     ],
+    external: ["react", "react-dom"],
     plugins: [
       resolve(),
       commonjs(),
